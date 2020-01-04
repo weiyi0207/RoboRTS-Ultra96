@@ -1,6 +1,5 @@
-# RoboRTS
-[![Build Status](https://travis-ci.org/RoboMaster/RoboRTS.svg?branch=master)](https://travis-ci.org/RoboMaster/RoboRTS)
-[![Gitter](https://badges.gitter.im/RoboMaster/RoboRTS.svg)](https://gitter.im/RoboMaster/RoboRTS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+# RoboRTS-Ultra96
+This project is based on [RoboRTS](https://github.com/RoboMaster/RoboRTS), an open source software stack for Real-Time Strategy reasearch on mobile robots, developed by RoboMaster.
 
 ## Introduction
 
