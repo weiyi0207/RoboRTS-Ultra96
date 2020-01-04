@@ -1,9 +1,13 @@
 # RoboRTS-Ultra96
-This project is based on [RoboRTS](https://github.com/RoboMaster/RoboRTS), an open source software stack for Real-Time Strategy reasearch on mobile robots, developed by RoboMaster.
+This project is based on [RoboRTS](https://github.com/RoboMaster/RoboRTS), an open source software stack for Real-Time Strategy reasearch on mobile robots, developed by RoboMaster. 
+
+This project is intended to be used with Xilinx Zynq UltraScale+ ™ MPSoC. The current board supported for this release is [AVNET Ultra96](https://www.96boards.org/product/ultra96/). 
 
 ## Introduction
 
-<img src="images/robot.jpg" style="zoom:100%;display: inline-block; float:middle"/>
+<center class="half">
+    <img src="images/robot.jpg" width="400"/><img src="images/Ultra96.png" width="200"/>
+</center>
 
 RoboRTS is an open source software stack for Real-Time Strategy research on mobile robots, developed by RoboMaster and motivated by [RoboMaster AI Challenge](#competition)
 
