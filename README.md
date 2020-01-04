@@ -5,9 +5,9 @@ This project is intended to be used with Xilinx Zynq UltraScale+ ™ MPSoC. The 
 
 ## Introduction
 
-<center class="half">
-    <img src="images/robot.jpg" width="400"/><img src="images/Ultra96.png" width="200"/>
-</center>
+<img src="images/robot_ultra96.jpg" style="zoom:100%;display: inline-block; float:middle"/>
+
+### RoboRTS Software Stack
 
 RoboRTS is an open source software stack for Real-Time Strategy research on mobile robots, developed by RoboMaster and motivated by [RoboMaster AI Challenge](#competition)
 
@@ -15,9 +15,11 @@ The framework of RoboRTS consists two parts: autonomous mobile robot layer and i
 
 <img src="images/system.png" style="zoom:80%;display: inline-block; float:middle"/>
 
-The autonomous mobile robot layer alone can let a robot, offically supported for RoboMaster AI Robot platform, to demonstrate a certain level of intelligence. On its on-board computer runs perception, motion planning, decision modules. It is fully supported in ROS with community driven as well as platform-customized codes and examples. On its MCU, an RT low-level robot controller is implemented to govern the robot driving system.  
+The autonomous mobile robot layer alone can let a robot, offically supported for RoboMaster AI Robot platform, to demonstrate a certain level of intelligence. On its on-board computer(Ultra96) runs perception, motion planning, decision modules. It is fully supported in ROS with community driven as well as platform-customized codes and examples. On its MCU, an RT low-level robot controller is implemented to govern the robot driving system.
 
-**TODO:** Intelligent decision-making layer includes a multi-agent decision-making framework and a game simulator, it will be released soon in the future.
+### Xilinx Zynq UltraScale+ ™ MPSoC for RoboMaster
+
+
 
 ## Tutorial
 
