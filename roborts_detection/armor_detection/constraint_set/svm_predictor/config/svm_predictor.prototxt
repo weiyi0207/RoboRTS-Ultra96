@@ -1,0 +1,3 @@
+model_name: "/armor_detection/constraint_set/svm_predictor/svm.xml"
+resize_height: 48
+resize_width: 64
