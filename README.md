@@ -19,11 +19,17 @@ The autonomous mobile robot layer alone can let a robot, offically supported for
 
 ### Xilinx Zynq UltraScale+ ™ MPSoC for RoboMaster
 
+With Xilinx Zynq UltraScale+ ™ MPSoC, users can move time consuming computational task to programmable logic(PL) while running ROS or other software packages in processing subsystem(PS), thus improving the overall system performance and achieving high energy efficiency.
 
+<img src="images/User_Guide_Design_Topo.png" style="zoom:70%;display: inline-block; float:middle"/>
 
 ## Tutorial
 
 For more information about RoboMaster AI Robot platform and RoboRTS framework, please refer to [RoboRTS Tutorial](https://robomaster.github.io/RoboRTS-Tutorial/#/)
+
+For more information about using RoboRTS framework on Xilinx Zynq UltraScale+ ™ MPSoC platform, please refer to [Ultra96 for RoboMaster User Guide](https://weiyi0207.gitbook.io/ultra96-for-robomaster-user-guide/)
+
+For getting the built system image of Ultra96 for RoboMaster, please refer to [RM-Ultra96-image](https://github.com/weiyi0207/RM-Ultra96-image/blob/master/README.md) 
 
 ## Competition
 
