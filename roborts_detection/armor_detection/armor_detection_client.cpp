@@ -61,6 +61,7 @@ int main(int argc, char **argv) {
         goal.command = 2;
         ROS_INFO("Action server will pause.");
         ac.sendGoal(goal);
+        break;
         //stop thread.
       case '3':
         goal.command = 3;

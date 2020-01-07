@@ -46,16 +46,12 @@ void protobuf_AssignDesc_constraint_5fset_2eproto() {
       "constraint_set.proto");
   GOOGLE_CHECK(file != NULL);
   Threshold_descriptor_ = file->message_type(0);
-  static const int Threshold_offsets_[17] = {
+  static const int Threshold_offsets_[13] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, light_max_aspect_ratio_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, light_min_aspect_ratio_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, light_max_area_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, light_min_area_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, light_max_angle_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, light_max_area_diff_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, light_max_angle_diff_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, armor_max_angle_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, armor_max_area_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, armor_min_area_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, armor_max_aspect_ratio_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Threshold, armor_max_pixel_val_),
@@ -110,12 +106,10 @@ void protobuf_AssignDesc_constraint_5fset_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SignalRecognization, _internal_metadata_),
       -1);
   ConstraintSetConfig_descriptor_ = file->message_type(3);
-  static const int ConstraintSetConfig_offsets_[9] = {
+  static const int ConstraintSetConfig_offsets_[7] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConstraintSetConfig, enable_debug_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConstraintSetConfig, enable_neon_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConstraintSetConfig, using_hsv_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConstraintSetConfig, using_svm_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConstraintSetConfig, create_dataset_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConstraintSetConfig, threshold_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConstraintSetConfig, armor_size_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConstraintSetConfig, enemy_color_),
@@ -178,31 +172,27 @@ void protobuf_AddDesc_constraint_5fset_2eproto() {
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\024constraint_set.proto\022\021roborts_detectio"
-    "n\"\306\003\n\tThreshold\022\036\n\026light_max_aspect_rati"
-    "o\030\001 \002(\002\022\036\n\026light_min_aspect_ratio\030\002 \002(\002\022"
-    "\026\n\016light_max_area\030\003 \002(\002\022\026\n\016light_min_are"
-    "a\030\004 \002(\002\022\027\n\017light_max_angle\030\005 \002(\002\022\033\n\023ligh"
-    "t_max_area_diff\030\006 \002(\002\022\034\n\024light_max_angle"
-    "_diff\030\007 \002(\002\022\027\n\017armor_max_angle\030\010 \002(\002\022\026\n\016"
-    "armor_max_area\030\t \002(\002\022\026\n\016armor_min_area\030\n"
-    " \002(\002\022\036\n\026armor_max_aspect_ratio\030\013 \002(\002\022\033\n\023"
-    "armor_max_pixel_val\030\014 \002(\002\022\030\n\020armor_max_s"
-    "tddev\030\r \002(\002\022\026\n\016armor_max_mean\030\016 \002(\002\022\024\n\014c"
-    "olor_thread\030\017 \002(\002\022\023\n\013blue_thread\030\020 \002(\002\022\022"
-    "\n\nred_thread\030\021 \002(\002\"*\n\tArmorSize\022\r\n\005width"
-    "\030\001 \002(\002\022\016\n\006height\030\002 \002(\002\"U\n\023SignalRecogniz"
-    "ation\022\024\n\014max_wait_fps\030\001 \002(\r\022\027\n\017min_pulse"
-    "_angle\030\002 \002(\002\022\017\n\007min_num\030\003 \002(\r\"\333\002\n\023Constr"
-    "aintSetConfig\022\024\n\014enable_debug\030\001 \002(\010\022\023\n\013e"
-    "nable_neon\030\002 \002(\010\022\021\n\tusing_hsv\030\003 \002(\010\022\021\n\tu"
-    "sing_svm\030\004 \002(\010\022\026\n\016create_dataset\030\005 \002(\010\022/"
-    "\n\tthreshold\030\006 \002(\0132\034.roborts_detection.Th"
-    "reshold\0220\n\narmor_size\030\007 \002(\0132\034.roborts_de"
-    "tection.ArmorSize\0222\n\013enemy_color\030\010 \002(\0162\035"
-    ".roborts_detection.EnemyColor\022D\n\024signal_"
-    "recognization\030\t \002(\0132&.roborts_detection."
-    "SignalRecognization*\037\n\nEnemyColor\022\010\n\004BLU"
-    "E\020\000\022\007\n\003RED\020\001", 1012);
+    "n\"\331\002\n\tThreshold\022\036\n\026light_max_aspect_rati"
+    "o\030\001 \002(\002\022\026\n\016light_min_area\030\002 \002(\002\022\027\n\017light"
+    "_max_angle\030\003 \002(\002\022\034\n\024light_max_angle_diff"
+    "\030\004 \002(\002\022\027\n\017armor_max_angle\030\005 \002(\002\022\026\n\016armor"
+    "_min_area\030\006 \002(\002\022\036\n\026armor_max_aspect_rati"
+    "o\030\007 \002(\002\022\033\n\023armor_max_pixel_val\030\010 \002(\002\022\030\n\020"
+    "armor_max_stddev\030\t \002(\002\022\026\n\016armor_max_mean"
+    "\030\n \002(\002\022\024\n\014color_thread\030\013 \002(\002\022\023\n\013blue_thr"
+    "ead\030\014 \002(\002\022\022\n\nred_thread\030\r \002(\002\"*\n\tArmorSi"
+    "ze\022\r\n\005width\030\001 \002(\002\022\016\n\006height\030\002 \002(\002\"U\n\023Sig"
+    "nalRecognization\022\024\n\014max_wait_fps\030\001 \002(\r\022\027"
+    "\n\017min_pulse_angle\030\002 \002(\002\022\017\n\007min_num\030\003 \002(\r"
+    "\"\260\002\n\023ConstraintSetConfig\022\024\n\014enable_debug"
+    "\030\001 \002(\010\022\023\n\013enable_neon\030\002 \002(\010\022\021\n\tusing_hsv"
+    "\030\003 \002(\010\022/\n\tthreshold\030\004 \002(\0132\034.roborts_dete"
+    "ction.Threshold\0220\n\narmor_size\030\005 \002(\0132\034.ro"
+    "borts_detection.ArmorSize\0222\n\013enemy_color"
+    "\030\006 \002(\0162\035.roborts_detection.EnemyColor\022D\n"
+    "\024signal_recognization\030\007 \002(\0132&.roborts_de"
+    "tection.SignalRecognization*\037\n\nEnemyColo"
+    "r\022\010\n\004BLUE\020\000\022\007\n\003RED\020\001", 860);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "constraint_set.proto", &protobuf_RegisterTypes);
   Threshold::default_instance_ = new Threshold();
@@ -241,14 +231,10 @@ bool EnemyColor_IsValid(int value) {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Threshold::kLightMaxAspectRatioFieldNumber;
-const int Threshold::kLightMinAspectRatioFieldNumber;
-const int Threshold::kLightMaxAreaFieldNumber;
 const int Threshold::kLightMinAreaFieldNumber;
 const int Threshold::kLightMaxAngleFieldNumber;
-const int Threshold::kLightMaxAreaDiffFieldNumber;
 const int Threshold::kLightMaxAngleDiffFieldNumber;
 const int Threshold::kArmorMaxAngleFieldNumber;
-const int Threshold::kArmorMaxAreaFieldNumber;
 const int Threshold::kArmorMinAreaFieldNumber;
 const int Threshold::kArmorMaxAspectRatioFieldNumber;
 const int Threshold::kArmorMaxPixelValFieldNumber;
@@ -279,14 +265,10 @@ Threshold::Threshold(const Threshold& from)
 void Threshold::SharedCtor() {
   _cached_size_ = 0;
   light_max_aspect_ratio_ = 0;
-  light_min_aspect_ratio_ = 0;
-  light_max_area_ = 0;
   light_min_area_ = 0;
   light_max_angle_ = 0;
-  light_max_area_diff_ = 0;
   light_max_angle_diff_ = 0;
   armor_max_angle_ = 0;
-  armor_max_area_ = 0;
   armor_min_area_ = 0;
   armor_max_aspect_ratio_ = 0;
   armor_max_pixel_val_ = 0;
@@ -352,12 +334,11 @@ void Threshold::Clear() {
 } while (0)
 
   if (_has_bits_[0 / 32] & 255u) {
-    ZR_(light_max_aspect_ratio_, armor_max_angle_);
+    ZR_(light_max_aspect_ratio_, armor_max_pixel_val_);
   }
-  if (_has_bits_[8 / 32] & 65280u) {
-    ZR_(armor_max_area_, blue_thread_);
+  if (_has_bits_[8 / 32] & 7936u) {
+    ZR_(armor_max_stddev_, red_thread_);
   }
-  red_thread_ = 0;
 
 #undef ZR_HELPER_
 #undef ZR_
@@ -374,7 +355,7 @@ bool Threshold::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:roborts_detection.Threshold)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(16383);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -388,43 +369,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(21)) goto parse_light_min_aspect_ratio;
+        if (input->ExpectTag(21)) goto parse_light_min_area;
         break;
       }
 
-      // required float light_min_aspect_ratio = 2;
+      // required float light_min_area = 2;
       case 2: {
         if (tag == 21) {
-         parse_light_min_aspect_ratio:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &light_min_aspect_ratio_)));
-          set_has_light_min_aspect_ratio();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(29)) goto parse_light_max_area;
-        break;
-      }
-
-      // required float light_max_area = 3;
-      case 3: {
-        if (tag == 29) {
-         parse_light_max_area:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &light_max_area_)));
-          set_has_light_max_area();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(37)) goto parse_light_min_area;
-        break;
-      }
-
-      // required float light_min_area = 4;
-      case 4: {
-        if (tag == 37) {
          parse_light_min_area:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -433,13 +384,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(45)) goto parse_light_max_angle;
+        if (input->ExpectTag(29)) goto parse_light_max_angle;
         break;
       }
 
-      // required float light_max_angle = 5;
-      case 5: {
-        if (tag == 45) {
+      // required float light_max_angle = 3;
+      case 3: {
+        if (tag == 29) {
          parse_light_max_angle:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -448,28 +399,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(53)) goto parse_light_max_area_diff;
+        if (input->ExpectTag(37)) goto parse_light_max_angle_diff;
         break;
       }
 
-      // required float light_max_area_diff = 6;
-      case 6: {
-        if (tag == 53) {
-         parse_light_max_area_diff:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &light_max_area_diff_)));
-          set_has_light_max_area_diff();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(61)) goto parse_light_max_angle_diff;
-        break;
-      }
-
-      // required float light_max_angle_diff = 7;
-      case 7: {
-        if (tag == 61) {
+      // required float light_max_angle_diff = 4;
+      case 4: {
+        if (tag == 37) {
          parse_light_max_angle_diff:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -478,13 +414,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(69)) goto parse_armor_max_angle;
+        if (input->ExpectTag(45)) goto parse_armor_max_angle;
         break;
       }
 
-      // required float armor_max_angle = 8;
-      case 8: {
-        if (tag == 69) {
+      // required float armor_max_angle = 5;
+      case 5: {
+        if (tag == 45) {
          parse_armor_max_angle:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -493,28 +429,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(77)) goto parse_armor_max_area;
+        if (input->ExpectTag(53)) goto parse_armor_min_area;
         break;
       }
 
-      // required float armor_max_area = 9;
-      case 9: {
-        if (tag == 77) {
-         parse_armor_max_area:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &armor_max_area_)));
-          set_has_armor_max_area();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(85)) goto parse_armor_min_area;
-        break;
-      }
-
-      // required float armor_min_area = 10;
-      case 10: {
-        if (tag == 85) {
+      // required float armor_min_area = 6;
+      case 6: {
+        if (tag == 53) {
          parse_armor_min_area:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -523,13 +444,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(93)) goto parse_armor_max_aspect_ratio;
+        if (input->ExpectTag(61)) goto parse_armor_max_aspect_ratio;
         break;
       }
 
-      // required float armor_max_aspect_ratio = 11;
-      case 11: {
-        if (tag == 93) {
+      // required float armor_max_aspect_ratio = 7;
+      case 7: {
+        if (tag == 61) {
          parse_armor_max_aspect_ratio:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -538,13 +459,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(101)) goto parse_armor_max_pixel_val;
+        if (input->ExpectTag(69)) goto parse_armor_max_pixel_val;
         break;
       }
 
-      // required float armor_max_pixel_val = 12;
-      case 12: {
-        if (tag == 101) {
+      // required float armor_max_pixel_val = 8;
+      case 8: {
+        if (tag == 69) {
          parse_armor_max_pixel_val:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -553,13 +474,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(109)) goto parse_armor_max_stddev;
+        if (input->ExpectTag(77)) goto parse_armor_max_stddev;
         break;
       }
 
-      // required float armor_max_stddev = 13;
-      case 13: {
-        if (tag == 109) {
+      // required float armor_max_stddev = 9;
+      case 9: {
+        if (tag == 77) {
          parse_armor_max_stddev:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -568,13 +489,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(117)) goto parse_armor_max_mean;
+        if (input->ExpectTag(85)) goto parse_armor_max_mean;
         break;
       }
 
-      // required float armor_max_mean = 14;
-      case 14: {
-        if (tag == 117) {
+      // required float armor_max_mean = 10;
+      case 10: {
+        if (tag == 85) {
          parse_armor_max_mean:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -583,13 +504,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(125)) goto parse_color_thread;
+        if (input->ExpectTag(93)) goto parse_color_thread;
         break;
       }
 
-      // required float color_thread = 15;
-      case 15: {
-        if (tag == 125) {
+      // required float color_thread = 11;
+      case 11: {
+        if (tag == 93) {
          parse_color_thread:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -598,13 +519,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(133)) goto parse_blue_thread;
+        if (input->ExpectTag(101)) goto parse_blue_thread;
         break;
       }
 
-      // required float blue_thread = 16;
-      case 16: {
-        if (tag == 133) {
+      // required float blue_thread = 12;
+      case 12: {
+        if (tag == 101) {
          parse_blue_thread:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -613,13 +534,13 @@ bool Threshold::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(141)) goto parse_red_thread;
+        if (input->ExpectTag(109)) goto parse_red_thread;
         break;
       }
 
-      // required float red_thread = 17;
-      case 17: {
-        if (tag == 141) {
+      // required float red_thread = 13;
+      case 13: {
+        if (tag == 109) {
          parse_red_thread:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -662,84 +583,64 @@ void Threshold::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteFloat(1, this->light_max_aspect_ratio(), output);
   }
 
-  // required float light_min_aspect_ratio = 2;
-  if (has_light_min_aspect_ratio()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->light_min_aspect_ratio(), output);
-  }
-
-  // required float light_max_area = 3;
-  if (has_light_max_area()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->light_max_area(), output);
-  }
-
-  // required float light_min_area = 4;
+  // required float light_min_area = 2;
   if (has_light_min_area()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->light_min_area(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->light_min_area(), output);
   }
 
-  // required float light_max_angle = 5;
+  // required float light_max_angle = 3;
   if (has_light_max_angle()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->light_max_angle(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->light_max_angle(), output);
   }
 
-  // required float light_max_area_diff = 6;
-  if (has_light_max_area_diff()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(6, this->light_max_area_diff(), output);
-  }
-
-  // required float light_max_angle_diff = 7;
+  // required float light_max_angle_diff = 4;
   if (has_light_max_angle_diff()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->light_max_angle_diff(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->light_max_angle_diff(), output);
   }
 
-  // required float armor_max_angle = 8;
+  // required float armor_max_angle = 5;
   if (has_armor_max_angle()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(8, this->armor_max_angle(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->armor_max_angle(), output);
   }
 
-  // required float armor_max_area = 9;
-  if (has_armor_max_area()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(9, this->armor_max_area(), output);
-  }
-
-  // required float armor_min_area = 10;
+  // required float armor_min_area = 6;
   if (has_armor_min_area()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(10, this->armor_min_area(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(6, this->armor_min_area(), output);
   }
 
-  // required float armor_max_aspect_ratio = 11;
+  // required float armor_max_aspect_ratio = 7;
   if (has_armor_max_aspect_ratio()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(11, this->armor_max_aspect_ratio(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->armor_max_aspect_ratio(), output);
   }
 
-  // required float armor_max_pixel_val = 12;
+  // required float armor_max_pixel_val = 8;
   if (has_armor_max_pixel_val()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(12, this->armor_max_pixel_val(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(8, this->armor_max_pixel_val(), output);
   }
 
-  // required float armor_max_stddev = 13;
+  // required float armor_max_stddev = 9;
   if (has_armor_max_stddev()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(13, this->armor_max_stddev(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(9, this->armor_max_stddev(), output);
   }
 
-  // required float armor_max_mean = 14;
+  // required float armor_max_mean = 10;
   if (has_armor_max_mean()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(14, this->armor_max_mean(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(10, this->armor_max_mean(), output);
   }
 
-  // required float color_thread = 15;
+  // required float color_thread = 11;
   if (has_color_thread()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(15, this->color_thread(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(11, this->color_thread(), output);
   }
 
-  // required float blue_thread = 16;
+  // required float blue_thread = 12;
   if (has_blue_thread()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(16, this->blue_thread(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(12, this->blue_thread(), output);
   }
 
-  // required float red_thread = 17;
+  // required float red_thread = 13;
   if (has_red_thread()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(17, this->red_thread(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(13, this->red_thread(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -757,84 +658,64 @@ void Threshold::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(1, this->light_max_aspect_ratio(), target);
   }
 
-  // required float light_min_aspect_ratio = 2;
-  if (has_light_min_aspect_ratio()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->light_min_aspect_ratio(), target);
-  }
-
-  // required float light_max_area = 3;
-  if (has_light_max_area()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->light_max_area(), target);
-  }
-
-  // required float light_min_area = 4;
+  // required float light_min_area = 2;
   if (has_light_min_area()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->light_min_area(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->light_min_area(), target);
   }
 
-  // required float light_max_angle = 5;
+  // required float light_max_angle = 3;
   if (has_light_max_angle()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->light_max_angle(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->light_max_angle(), target);
   }
 
-  // required float light_max_area_diff = 6;
-  if (has_light_max_area_diff()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(6, this->light_max_area_diff(), target);
-  }
-
-  // required float light_max_angle_diff = 7;
+  // required float light_max_angle_diff = 4;
   if (has_light_max_angle_diff()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->light_max_angle_diff(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->light_max_angle_diff(), target);
   }
 
-  // required float armor_max_angle = 8;
+  // required float armor_max_angle = 5;
   if (has_armor_max_angle()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(8, this->armor_max_angle(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->armor_max_angle(), target);
   }
 
-  // required float armor_max_area = 9;
-  if (has_armor_max_area()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(9, this->armor_max_area(), target);
-  }
-
-  // required float armor_min_area = 10;
+  // required float armor_min_area = 6;
   if (has_armor_min_area()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(10, this->armor_min_area(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(6, this->armor_min_area(), target);
   }
 
-  // required float armor_max_aspect_ratio = 11;
+  // required float armor_max_aspect_ratio = 7;
   if (has_armor_max_aspect_ratio()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(11, this->armor_max_aspect_ratio(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->armor_max_aspect_ratio(), target);
   }
 
-  // required float armor_max_pixel_val = 12;
+  // required float armor_max_pixel_val = 8;
   if (has_armor_max_pixel_val()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(12, this->armor_max_pixel_val(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(8, this->armor_max_pixel_val(), target);
   }
 
-  // required float armor_max_stddev = 13;
+  // required float armor_max_stddev = 9;
   if (has_armor_max_stddev()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(13, this->armor_max_stddev(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(9, this->armor_max_stddev(), target);
   }
 
-  // required float armor_max_mean = 14;
+  // required float armor_max_mean = 10;
   if (has_armor_max_mean()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(14, this->armor_max_mean(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(10, this->armor_max_mean(), target);
   }
 
-  // required float color_thread = 15;
+  // required float color_thread = 11;
   if (has_color_thread()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(15, this->color_thread(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(11, this->color_thread(), target);
   }
 
-  // required float blue_thread = 16;
+  // required float blue_thread = 12;
   if (has_blue_thread()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(16, this->blue_thread(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(12, this->blue_thread(), target);
   }
 
-  // required float red_thread = 17;
+  // required float red_thread = 13;
   if (has_red_thread()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(17, this->red_thread(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(13, this->red_thread(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -854,84 +735,64 @@ int Threshold::RequiredFieldsByteSizeFallback() const {
     total_size += 1 + 4;
   }
 
-  if (has_light_min_aspect_ratio()) {
-    // required float light_min_aspect_ratio = 2;
-    total_size += 1 + 4;
-  }
-
-  if (has_light_max_area()) {
-    // required float light_max_area = 3;
-    total_size += 1 + 4;
-  }
-
   if (has_light_min_area()) {
-    // required float light_min_area = 4;
+    // required float light_min_area = 2;
     total_size += 1 + 4;
   }
 
   if (has_light_max_angle()) {
-    // required float light_max_angle = 5;
-    total_size += 1 + 4;
-  }
-
-  if (has_light_max_area_diff()) {
-    // required float light_max_area_diff = 6;
+    // required float light_max_angle = 3;
     total_size += 1 + 4;
   }
 
   if (has_light_max_angle_diff()) {
-    // required float light_max_angle_diff = 7;
+    // required float light_max_angle_diff = 4;
     total_size += 1 + 4;
   }
 
   if (has_armor_max_angle()) {
-    // required float armor_max_angle = 8;
-    total_size += 1 + 4;
-  }
-
-  if (has_armor_max_area()) {
-    // required float armor_max_area = 9;
+    // required float armor_max_angle = 5;
     total_size += 1 + 4;
   }
 
   if (has_armor_min_area()) {
-    // required float armor_min_area = 10;
+    // required float armor_min_area = 6;
     total_size += 1 + 4;
   }
 
   if (has_armor_max_aspect_ratio()) {
-    // required float armor_max_aspect_ratio = 11;
+    // required float armor_max_aspect_ratio = 7;
     total_size += 1 + 4;
   }
 
   if (has_armor_max_pixel_val()) {
-    // required float armor_max_pixel_val = 12;
+    // required float armor_max_pixel_val = 8;
     total_size += 1 + 4;
   }
 
   if (has_armor_max_stddev()) {
-    // required float armor_max_stddev = 13;
+    // required float armor_max_stddev = 9;
     total_size += 1 + 4;
   }
 
   if (has_armor_max_mean()) {
-    // required float armor_max_mean = 14;
+    // required float armor_max_mean = 10;
     total_size += 1 + 4;
   }
 
   if (has_color_thread()) {
-    // required float color_thread = 15;
+    // required float color_thread = 11;
     total_size += 1 + 4;
   }
 
   if (has_blue_thread()) {
-    // required float blue_thread = 16;
-    total_size += 2 + 4;
+    // required float blue_thread = 12;
+    total_size += 1 + 4;
   }
 
   if (has_red_thread()) {
-    // required float red_thread = 17;
-    total_size += 2 + 4;
+    // required float red_thread = 13;
+    total_size += 1 + 4;
   }
 
   return total_size;
@@ -940,57 +801,45 @@ int Threshold::ByteSize() const {
 // @@protoc_insertion_point(message_byte_size_start:roborts_detection.Threshold)
   int total_size = 0;
 
-  if (((_has_bits_[0] & 0x0001ffff) ^ 0x0001ffff) == 0) {  // All required fields are present.
+  if (((_has_bits_[0] & 0x00001fff) ^ 0x00001fff) == 0) {  // All required fields are present.
     // required float light_max_aspect_ratio = 1;
     total_size += 1 + 4;
 
-    // required float light_min_aspect_ratio = 2;
+    // required float light_min_area = 2;
     total_size += 1 + 4;
 
-    // required float light_max_area = 3;
+    // required float light_max_angle = 3;
     total_size += 1 + 4;
 
-    // required float light_min_area = 4;
+    // required float light_max_angle_diff = 4;
     total_size += 1 + 4;
 
-    // required float light_max_angle = 5;
+    // required float armor_max_angle = 5;
     total_size += 1 + 4;
 
-    // required float light_max_area_diff = 6;
+    // required float armor_min_area = 6;
     total_size += 1 + 4;
 
-    // required float light_max_angle_diff = 7;
+    // required float armor_max_aspect_ratio = 7;
     total_size += 1 + 4;
 
-    // required float armor_max_angle = 8;
+    // required float armor_max_pixel_val = 8;
     total_size += 1 + 4;
 
-    // required float armor_max_area = 9;
+    // required float armor_max_stddev = 9;
     total_size += 1 + 4;
 
-    // required float armor_min_area = 10;
+    // required float armor_max_mean = 10;
     total_size += 1 + 4;
 
-    // required float armor_max_aspect_ratio = 11;
+    // required float color_thread = 11;
     total_size += 1 + 4;
 
-    // required float armor_max_pixel_val = 12;
+    // required float blue_thread = 12;
     total_size += 1 + 4;
 
-    // required float armor_max_stddev = 13;
+    // required float red_thread = 13;
     total_size += 1 + 4;
-
-    // required float armor_max_mean = 14;
-    total_size += 1 + 4;
-
-    // required float color_thread = 15;
-    total_size += 1 + 4;
-
-    // required float blue_thread = 16;
-    total_size += 2 + 4;
-
-    // required float red_thread = 17;
-    total_size += 2 + 4;
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1032,31 +881,17 @@ void Threshold::MergeFrom(const Threshold& from) {
     if (from.has_light_max_aspect_ratio()) {
       set_light_max_aspect_ratio(from.light_max_aspect_ratio());
     }
-    if (from.has_light_min_aspect_ratio()) {
-      set_light_min_aspect_ratio(from.light_min_aspect_ratio());
-    }
-    if (from.has_light_max_area()) {
-      set_light_max_area(from.light_max_area());
-    }
     if (from.has_light_min_area()) {
       set_light_min_area(from.light_min_area());
     }
     if (from.has_light_max_angle()) {
       set_light_max_angle(from.light_max_angle());
     }
-    if (from.has_light_max_area_diff()) {
-      set_light_max_area_diff(from.light_max_area_diff());
-    }
     if (from.has_light_max_angle_diff()) {
       set_light_max_angle_diff(from.light_max_angle_diff());
     }
     if (from.has_armor_max_angle()) {
       set_armor_max_angle(from.armor_max_angle());
-    }
-  }
-  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
-    if (from.has_armor_max_area()) {
-      set_armor_max_area(from.armor_max_area());
     }
     if (from.has_armor_min_area()) {
       set_armor_min_area(from.armor_min_area());
@@ -1067,6 +902,8 @@ void Threshold::MergeFrom(const Threshold& from) {
     if (from.has_armor_max_pixel_val()) {
       set_armor_max_pixel_val(from.armor_max_pixel_val());
     }
+  }
+  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
     if (from.has_armor_max_stddev()) {
       set_armor_max_stddev(from.armor_max_stddev());
     }
@@ -1079,8 +916,6 @@ void Threshold::MergeFrom(const Threshold& from) {
     if (from.has_blue_thread()) {
       set_blue_thread(from.blue_thread());
     }
-  }
-  if (from._has_bits_[16 / 32] & (0xffu << (16 % 32))) {
     if (from.has_red_thread()) {
       set_red_thread(from.red_thread());
     }
@@ -1105,7 +940,7 @@ void Threshold::CopyFrom(const Threshold& from) {
 }
 
 bool Threshold::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0001ffff) != 0x0001ffff) return false;
+  if ((_has_bits_[0] & 0x00001fff) != 0x00001fff) return false;
 
   return true;
 }
@@ -1116,14 +951,10 @@ void Threshold::Swap(Threshold* other) {
 }
 void Threshold::InternalSwap(Threshold* other) {
   std::swap(light_max_aspect_ratio_, other->light_max_aspect_ratio_);
-  std::swap(light_min_aspect_ratio_, other->light_min_aspect_ratio_);
-  std::swap(light_max_area_, other->light_max_area_);
   std::swap(light_min_area_, other->light_min_area_);
   std::swap(light_max_angle_, other->light_max_angle_);
-  std::swap(light_max_area_diff_, other->light_max_area_diff_);
   std::swap(light_max_angle_diff_, other->light_max_angle_diff_);
   std::swap(armor_max_angle_, other->armor_max_angle_);
-  std::swap(armor_max_area_, other->armor_max_area_);
   std::swap(armor_min_area_, other->armor_min_area_);
   std::swap(armor_max_aspect_ratio_, other->armor_max_aspect_ratio_);
   std::swap(armor_max_pixel_val_, other->armor_max_pixel_val_);
@@ -1172,63 +1003,15 @@ void Threshold::clear_light_max_aspect_ratio() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.light_max_aspect_ratio)
 }
 
-// required float light_min_aspect_ratio = 2;
-bool Threshold::has_light_min_aspect_ratio() const {
+// required float light_min_area = 2;
+bool Threshold::has_light_min_area() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-void Threshold::set_has_light_min_aspect_ratio() {
+void Threshold::set_has_light_min_area() {
   _has_bits_[0] |= 0x00000002u;
 }
-void Threshold::clear_has_light_min_aspect_ratio() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-void Threshold::clear_light_min_aspect_ratio() {
-  light_min_aspect_ratio_ = 0;
-  clear_has_light_min_aspect_ratio();
-}
- float Threshold::light_min_aspect_ratio() const {
-  // @@protoc_insertion_point(field_get:roborts_detection.Threshold.light_min_aspect_ratio)
-  return light_min_aspect_ratio_;
-}
- void Threshold::set_light_min_aspect_ratio(float value) {
-  set_has_light_min_aspect_ratio();
-  light_min_aspect_ratio_ = value;
-  // @@protoc_insertion_point(field_set:roborts_detection.Threshold.light_min_aspect_ratio)
-}
-
-// required float light_max_area = 3;
-bool Threshold::has_light_max_area() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-void Threshold::set_has_light_max_area() {
-  _has_bits_[0] |= 0x00000004u;
-}
-void Threshold::clear_has_light_max_area() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-void Threshold::clear_light_max_area() {
-  light_max_area_ = 0;
-  clear_has_light_max_area();
-}
- float Threshold::light_max_area() const {
-  // @@protoc_insertion_point(field_get:roborts_detection.Threshold.light_max_area)
-  return light_max_area_;
-}
- void Threshold::set_light_max_area(float value) {
-  set_has_light_max_area();
-  light_max_area_ = value;
-  // @@protoc_insertion_point(field_set:roborts_detection.Threshold.light_max_area)
-}
-
-// required float light_min_area = 4;
-bool Threshold::has_light_min_area() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-void Threshold::set_has_light_min_area() {
-  _has_bits_[0] |= 0x00000008u;
-}
 void Threshold::clear_has_light_min_area() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 void Threshold::clear_light_min_area() {
   light_min_area_ = 0;
@@ -1244,15 +1027,15 @@ void Threshold::clear_light_min_area() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.light_min_area)
 }
 
-// required float light_max_angle = 5;
+// required float light_max_angle = 3;
 bool Threshold::has_light_max_angle() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
+  return (_has_bits_[0] & 0x00000004u) != 0;
 }
 void Threshold::set_has_light_max_angle() {
-  _has_bits_[0] |= 0x00000010u;
+  _has_bits_[0] |= 0x00000004u;
 }
 void Threshold::clear_has_light_max_angle() {
-  _has_bits_[0] &= ~0x00000010u;
+  _has_bits_[0] &= ~0x00000004u;
 }
 void Threshold::clear_light_max_angle() {
   light_max_angle_ = 0;
@@ -1268,39 +1051,15 @@ void Threshold::clear_light_max_angle() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.light_max_angle)
 }
 
-// required float light_max_area_diff = 6;
-bool Threshold::has_light_max_area_diff() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-void Threshold::set_has_light_max_area_diff() {
-  _has_bits_[0] |= 0x00000020u;
-}
-void Threshold::clear_has_light_max_area_diff() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-void Threshold::clear_light_max_area_diff() {
-  light_max_area_diff_ = 0;
-  clear_has_light_max_area_diff();
-}
- float Threshold::light_max_area_diff() const {
-  // @@protoc_insertion_point(field_get:roborts_detection.Threshold.light_max_area_diff)
-  return light_max_area_diff_;
-}
- void Threshold::set_light_max_area_diff(float value) {
-  set_has_light_max_area_diff();
-  light_max_area_diff_ = value;
-  // @@protoc_insertion_point(field_set:roborts_detection.Threshold.light_max_area_diff)
-}
-
-// required float light_max_angle_diff = 7;
+// required float light_max_angle_diff = 4;
 bool Threshold::has_light_max_angle_diff() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000008u) != 0;
 }
 void Threshold::set_has_light_max_angle_diff() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000008u;
 }
 void Threshold::clear_has_light_max_angle_diff() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 void Threshold::clear_light_max_angle_diff() {
   light_max_angle_diff_ = 0;
@@ -1316,15 +1075,15 @@ void Threshold::clear_light_max_angle_diff() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.light_max_angle_diff)
 }
 
-// required float armor_max_angle = 8;
+// required float armor_max_angle = 5;
 bool Threshold::has_armor_max_angle() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 void Threshold::set_has_armor_max_angle() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000010u;
 }
 void Threshold::clear_has_armor_max_angle() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 void Threshold::clear_armor_max_angle() {
   armor_max_angle_ = 0;
@@ -1340,39 +1099,15 @@ void Threshold::clear_armor_max_angle() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.armor_max_angle)
 }
 
-// required float armor_max_area = 9;
-bool Threshold::has_armor_max_area() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
-}
-void Threshold::set_has_armor_max_area() {
-  _has_bits_[0] |= 0x00000100u;
-}
-void Threshold::clear_has_armor_max_area() {
-  _has_bits_[0] &= ~0x00000100u;
-}
-void Threshold::clear_armor_max_area() {
-  armor_max_area_ = 0;
-  clear_has_armor_max_area();
-}
- float Threshold::armor_max_area() const {
-  // @@protoc_insertion_point(field_get:roborts_detection.Threshold.armor_max_area)
-  return armor_max_area_;
-}
- void Threshold::set_armor_max_area(float value) {
-  set_has_armor_max_area();
-  armor_max_area_ = value;
-  // @@protoc_insertion_point(field_set:roborts_detection.Threshold.armor_max_area)
-}
-
-// required float armor_min_area = 10;
+// required float armor_min_area = 6;
 bool Threshold::has_armor_min_area() const {
-  return (_has_bits_[0] & 0x00000200u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 void Threshold::set_has_armor_min_area() {
-  _has_bits_[0] |= 0x00000200u;
+  _has_bits_[0] |= 0x00000020u;
 }
 void Threshold::clear_has_armor_min_area() {
-  _has_bits_[0] &= ~0x00000200u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 void Threshold::clear_armor_min_area() {
   armor_min_area_ = 0;
@@ -1388,15 +1123,15 @@ void Threshold::clear_armor_min_area() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.armor_min_area)
 }
 
-// required float armor_max_aspect_ratio = 11;
+// required float armor_max_aspect_ratio = 7;
 bool Threshold::has_armor_max_aspect_ratio() const {
-  return (_has_bits_[0] & 0x00000400u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 void Threshold::set_has_armor_max_aspect_ratio() {
-  _has_bits_[0] |= 0x00000400u;
+  _has_bits_[0] |= 0x00000040u;
 }
 void Threshold::clear_has_armor_max_aspect_ratio() {
-  _has_bits_[0] &= ~0x00000400u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 void Threshold::clear_armor_max_aspect_ratio() {
   armor_max_aspect_ratio_ = 0;
@@ -1412,15 +1147,15 @@ void Threshold::clear_armor_max_aspect_ratio() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.armor_max_aspect_ratio)
 }
 
-// required float armor_max_pixel_val = 12;
+// required float armor_max_pixel_val = 8;
 bool Threshold::has_armor_max_pixel_val() const {
-  return (_has_bits_[0] & 0x00000800u) != 0;
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
 void Threshold::set_has_armor_max_pixel_val() {
-  _has_bits_[0] |= 0x00000800u;
+  _has_bits_[0] |= 0x00000080u;
 }
 void Threshold::clear_has_armor_max_pixel_val() {
-  _has_bits_[0] &= ~0x00000800u;
+  _has_bits_[0] &= ~0x00000080u;
 }
 void Threshold::clear_armor_max_pixel_val() {
   armor_max_pixel_val_ = 0;
@@ -1436,15 +1171,15 @@ void Threshold::clear_armor_max_pixel_val() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.armor_max_pixel_val)
 }
 
-// required float armor_max_stddev = 13;
+// required float armor_max_stddev = 9;
 bool Threshold::has_armor_max_stddev() const {
-  return (_has_bits_[0] & 0x00001000u) != 0;
+  return (_has_bits_[0] & 0x00000100u) != 0;
 }
 void Threshold::set_has_armor_max_stddev() {
-  _has_bits_[0] |= 0x00001000u;
+  _has_bits_[0] |= 0x00000100u;
 }
 void Threshold::clear_has_armor_max_stddev() {
-  _has_bits_[0] &= ~0x00001000u;
+  _has_bits_[0] &= ~0x00000100u;
 }
 void Threshold::clear_armor_max_stddev() {
   armor_max_stddev_ = 0;
@@ -1460,15 +1195,15 @@ void Threshold::clear_armor_max_stddev() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.armor_max_stddev)
 }
 
-// required float armor_max_mean = 14;
+// required float armor_max_mean = 10;
 bool Threshold::has_armor_max_mean() const {
-  return (_has_bits_[0] & 0x00002000u) != 0;
+  return (_has_bits_[0] & 0x00000200u) != 0;
 }
 void Threshold::set_has_armor_max_mean() {
-  _has_bits_[0] |= 0x00002000u;
+  _has_bits_[0] |= 0x00000200u;
 }
 void Threshold::clear_has_armor_max_mean() {
-  _has_bits_[0] &= ~0x00002000u;
+  _has_bits_[0] &= ~0x00000200u;
 }
 void Threshold::clear_armor_max_mean() {
   armor_max_mean_ = 0;
@@ -1484,15 +1219,15 @@ void Threshold::clear_armor_max_mean() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.armor_max_mean)
 }
 
-// required float color_thread = 15;
+// required float color_thread = 11;
 bool Threshold::has_color_thread() const {
-  return (_has_bits_[0] & 0x00004000u) != 0;
+  return (_has_bits_[0] & 0x00000400u) != 0;
 }
 void Threshold::set_has_color_thread() {
-  _has_bits_[0] |= 0x00004000u;
+  _has_bits_[0] |= 0x00000400u;
 }
 void Threshold::clear_has_color_thread() {
-  _has_bits_[0] &= ~0x00004000u;
+  _has_bits_[0] &= ~0x00000400u;
 }
 void Threshold::clear_color_thread() {
   color_thread_ = 0;
@@ -1508,15 +1243,15 @@ void Threshold::clear_color_thread() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.color_thread)
 }
 
-// required float blue_thread = 16;
+// required float blue_thread = 12;
 bool Threshold::has_blue_thread() const {
-  return (_has_bits_[0] & 0x00008000u) != 0;
+  return (_has_bits_[0] & 0x00000800u) != 0;
 }
 void Threshold::set_has_blue_thread() {
-  _has_bits_[0] |= 0x00008000u;
+  _has_bits_[0] |= 0x00000800u;
 }
 void Threshold::clear_has_blue_thread() {
-  _has_bits_[0] &= ~0x00008000u;
+  _has_bits_[0] &= ~0x00000800u;
 }
 void Threshold::clear_blue_thread() {
   blue_thread_ = 0;
@@ -1532,15 +1267,15 @@ void Threshold::clear_blue_thread() {
   // @@protoc_insertion_point(field_set:roborts_detection.Threshold.blue_thread)
 }
 
-// required float red_thread = 17;
+// required float red_thread = 13;
 bool Threshold::has_red_thread() const {
-  return (_has_bits_[0] & 0x00010000u) != 0;
+  return (_has_bits_[0] & 0x00001000u) != 0;
 }
 void Threshold::set_has_red_thread() {
-  _has_bits_[0] |= 0x00010000u;
+  _has_bits_[0] |= 0x00001000u;
 }
 void Threshold::clear_has_red_thread() {
-  _has_bits_[0] &= ~0x00010000u;
+  _has_bits_[0] &= ~0x00001000u;
 }
 void Threshold::clear_red_thread() {
   red_thread_ = 0;
@@ -2367,8 +2102,6 @@ void SignalRecognization::clear_min_num() {
 const int ConstraintSetConfig::kEnableDebugFieldNumber;
 const int ConstraintSetConfig::kEnableNeonFieldNumber;
 const int ConstraintSetConfig::kUsingHsvFieldNumber;
-const int ConstraintSetConfig::kUsingSvmFieldNumber;
-const int ConstraintSetConfig::kCreateDatasetFieldNumber;
 const int ConstraintSetConfig::kThresholdFieldNumber;
 const int ConstraintSetConfig::kArmorSizeFieldNumber;
 const int ConstraintSetConfig::kEnemyColorFieldNumber;
@@ -2400,8 +2133,6 @@ void ConstraintSetConfig::SharedCtor() {
   enable_debug_ = false;
   enable_neon_ = false;
   using_hsv_ = false;
-  using_svm_ = false;
-  create_dataset_ = false;
   threshold_ = NULL;
   armor_size_ = NULL;
   enemy_color_ = 0;
@@ -2465,18 +2196,17 @@ void ConstraintSetConfig::Clear() {
            ZR_HELPER_(last) - ZR_HELPER_(first) + sizeof(last));\
 } while (0)
 
-  if (_has_bits_[0 / 32] & 255u) {
-    ZR_(enable_debug_, create_dataset_);
+  if (_has_bits_[0 / 32] & 127u) {
+    ZR_(enable_debug_, enemy_color_);
     if (has_threshold()) {
       if (threshold_ != NULL) threshold_->::roborts_detection::Threshold::Clear();
     }
     if (has_armor_size()) {
       if (armor_size_ != NULL) armor_size_->::roborts_detection::ArmorSize::Clear();
     }
-    enemy_color_ = 0;
-  }
-  if (has_signal_recognization()) {
-    if (signal_recognization_ != NULL) signal_recognization_->::roborts_detection::SignalRecognization::Clear();
+    if (has_signal_recognization()) {
+      if (signal_recognization_ != NULL) signal_recognization_->::roborts_detection::SignalRecognization::Clear();
+    }
   }
 
 #undef ZR_HELPER_
@@ -2538,69 +2268,39 @@ bool ConstraintSetConfig::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(32)) goto parse_using_svm;
+        if (input->ExpectTag(34)) goto parse_threshold;
         break;
       }
 
-      // required bool using_svm = 4;
+      // required .roborts_detection.Threshold threshold = 4;
       case 4: {
-        if (tag == 32) {
-         parse_using_svm:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &using_svm_)));
-          set_has_using_svm();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(40)) goto parse_create_dataset;
-        break;
-      }
-
-      // required bool create_dataset = 5;
-      case 5: {
-        if (tag == 40) {
-         parse_create_dataset:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &create_dataset_)));
-          set_has_create_dataset();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(50)) goto parse_threshold;
-        break;
-      }
-
-      // required .roborts_detection.Threshold threshold = 6;
-      case 6: {
-        if (tag == 50) {
+        if (tag == 34) {
          parse_threshold:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_threshold()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(58)) goto parse_armor_size;
+        if (input->ExpectTag(42)) goto parse_armor_size;
         break;
       }
 
-      // required .roborts_detection.ArmorSize armor_size = 7;
-      case 7: {
-        if (tag == 58) {
+      // required .roborts_detection.ArmorSize armor_size = 5;
+      case 5: {
+        if (tag == 42) {
          parse_armor_size:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_armor_size()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(64)) goto parse_enemy_color;
+        if (input->ExpectTag(48)) goto parse_enemy_color;
         break;
       }
 
-      // required .roborts_detection.EnemyColor enemy_color = 8;
-      case 8: {
-        if (tag == 64) {
+      // required .roborts_detection.EnemyColor enemy_color = 6;
+      case 6: {
+        if (tag == 48) {
          parse_enemy_color:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -2609,18 +2309,18 @@ bool ConstraintSetConfig::MergePartialFromCodedStream(
           if (::roborts_detection::EnemyColor_IsValid(value)) {
             set_enemy_color(static_cast< ::roborts_detection::EnemyColor >(value));
           } else {
-            mutable_unknown_fields()->AddVarint(8, value);
+            mutable_unknown_fields()->AddVarint(6, value);
           }
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(74)) goto parse_signal_recognization;
+        if (input->ExpectTag(58)) goto parse_signal_recognization;
         break;
       }
 
-      // required .roborts_detection.SignalRecognization signal_recognization = 9;
-      case 9: {
-        if (tag == 74) {
+      // required .roborts_detection.SignalRecognization signal_recognization = 7;
+      case 7: {
+        if (tag == 58) {
          parse_signal_recognization:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_signal_recognization()));
@@ -2671,38 +2371,28 @@ void ConstraintSetConfig::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->using_hsv(), output);
   }
 
-  // required bool using_svm = 4;
-  if (has_using_svm()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->using_svm(), output);
-  }
-
-  // required bool create_dataset = 5;
-  if (has_create_dataset()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(5, this->create_dataset(), output);
-  }
-
-  // required .roborts_detection.Threshold threshold = 6;
+  // required .roborts_detection.Threshold threshold = 4;
   if (has_threshold()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, *this->threshold_, output);
+      4, *this->threshold_, output);
   }
 
-  // required .roborts_detection.ArmorSize armor_size = 7;
+  // required .roborts_detection.ArmorSize armor_size = 5;
   if (has_armor_size()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, *this->armor_size_, output);
+      5, *this->armor_size_, output);
   }
 
-  // required .roborts_detection.EnemyColor enemy_color = 8;
+  // required .roborts_detection.EnemyColor enemy_color = 6;
   if (has_enemy_color()) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      8, this->enemy_color(), output);
+      6, this->enemy_color(), output);
   }
 
-  // required .roborts_detection.SignalRecognization signal_recognization = 9;
+  // required .roborts_detection.SignalRecognization signal_recognization = 7;
   if (has_signal_recognization()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, *this->signal_recognization_, output);
+      7, *this->signal_recognization_, output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2730,41 +2420,31 @@ void ConstraintSetConfig::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->using_hsv(), target);
   }
 
-  // required bool using_svm = 4;
-  if (has_using_svm()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->using_svm(), target);
-  }
-
-  // required bool create_dataset = 5;
-  if (has_create_dataset()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(5, this->create_dataset(), target);
-  }
-
-  // required .roborts_detection.Threshold threshold = 6;
+  // required .roborts_detection.Threshold threshold = 4;
   if (has_threshold()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        6, *this->threshold_, false, target);
+        4, *this->threshold_, false, target);
   }
 
-  // required .roborts_detection.ArmorSize armor_size = 7;
+  // required .roborts_detection.ArmorSize armor_size = 5;
   if (has_armor_size()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        7, *this->armor_size_, false, target);
+        5, *this->armor_size_, false, target);
   }
 
-  // required .roborts_detection.EnemyColor enemy_color = 8;
+  // required .roborts_detection.EnemyColor enemy_color = 6;
   if (has_enemy_color()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      8, this->enemy_color(), target);
+      6, this->enemy_color(), target);
   }
 
-  // required .roborts_detection.SignalRecognization signal_recognization = 9;
+  // required .roborts_detection.SignalRecognization signal_recognization = 7;
   if (has_signal_recognization()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        9, *this->signal_recognization_, false, target);
+        7, *this->signal_recognization_, false, target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2794,38 +2474,28 @@ int ConstraintSetConfig::RequiredFieldsByteSizeFallback() const {
     total_size += 1 + 1;
   }
 
-  if (has_using_svm()) {
-    // required bool using_svm = 4;
-    total_size += 1 + 1;
-  }
-
-  if (has_create_dataset()) {
-    // required bool create_dataset = 5;
-    total_size += 1 + 1;
-  }
-
   if (has_threshold()) {
-    // required .roborts_detection.Threshold threshold = 6;
+    // required .roborts_detection.Threshold threshold = 4;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->threshold_);
   }
 
   if (has_armor_size()) {
-    // required .roborts_detection.ArmorSize armor_size = 7;
+    // required .roborts_detection.ArmorSize armor_size = 5;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->armor_size_);
   }
 
   if (has_enemy_color()) {
-    // required .roborts_detection.EnemyColor enemy_color = 8;
+    // required .roborts_detection.EnemyColor enemy_color = 6;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->enemy_color());
   }
 
   if (has_signal_recognization()) {
-    // required .roborts_detection.SignalRecognization signal_recognization = 9;
+    // required .roborts_detection.SignalRecognization signal_recognization = 7;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->signal_recognization_);
@@ -2837,7 +2507,7 @@ int ConstraintSetConfig::ByteSize() const {
 // @@protoc_insertion_point(message_byte_size_start:roborts_detection.ConstraintSetConfig)
   int total_size = 0;
 
-  if (((_has_bits_[0] & 0x000001ff) ^ 0x000001ff) == 0) {  // All required fields are present.
+  if (((_has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
     // required bool enable_debug = 1;
     total_size += 1 + 1;
 
@@ -2847,27 +2517,21 @@ int ConstraintSetConfig::ByteSize() const {
     // required bool using_hsv = 3;
     total_size += 1 + 1;
 
-    // required bool using_svm = 4;
-    total_size += 1 + 1;
-
-    // required bool create_dataset = 5;
-    total_size += 1 + 1;
-
-    // required .roborts_detection.Threshold threshold = 6;
+    // required .roborts_detection.Threshold threshold = 4;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->threshold_);
 
-    // required .roborts_detection.ArmorSize armor_size = 7;
+    // required .roborts_detection.ArmorSize armor_size = 5;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->armor_size_);
 
-    // required .roborts_detection.EnemyColor enemy_color = 8;
+    // required .roborts_detection.EnemyColor enemy_color = 6;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->enemy_color());
 
-    // required .roborts_detection.SignalRecognization signal_recognization = 9;
+    // required .roborts_detection.SignalRecognization signal_recognization = 7;
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->signal_recognization_);
@@ -2918,12 +2582,6 @@ void ConstraintSetConfig::MergeFrom(const ConstraintSetConfig& from) {
     if (from.has_using_hsv()) {
       set_using_hsv(from.using_hsv());
     }
-    if (from.has_using_svm()) {
-      set_using_svm(from.using_svm());
-    }
-    if (from.has_create_dataset()) {
-      set_create_dataset(from.create_dataset());
-    }
     if (from.has_threshold()) {
       mutable_threshold()->::roborts_detection::Threshold::MergeFrom(from.threshold());
     }
@@ -2933,8 +2591,6 @@ void ConstraintSetConfig::MergeFrom(const ConstraintSetConfig& from) {
     if (from.has_enemy_color()) {
       set_enemy_color(from.enemy_color());
     }
-  }
-  if (from._has_bits_[8 / 32] & (0xffu << (8 % 32))) {
     if (from.has_signal_recognization()) {
       mutable_signal_recognization()->::roborts_detection::SignalRecognization::MergeFrom(from.signal_recognization());
     }
@@ -2959,7 +2615,7 @@ void ConstraintSetConfig::CopyFrom(const ConstraintSetConfig& from) {
 }
 
 bool ConstraintSetConfig::IsInitialized() const {
-  if ((_has_bits_[0] & 0x000001ff) != 0x000001ff) return false;
+  if ((_has_bits_[0] & 0x0000007f) != 0x0000007f) return false;
 
   if (has_threshold()) {
     if (!this->threshold_->IsInitialized()) return false;
@@ -2981,8 +2637,6 @@ void ConstraintSetConfig::InternalSwap(ConstraintSetConfig* other) {
   std::swap(enable_debug_, other->enable_debug_);
   std::swap(enable_neon_, other->enable_neon_);
   std::swap(using_hsv_, other->using_hsv_);
-  std::swap(using_svm_, other->using_svm_);
-  std::swap(create_dataset_, other->create_dataset_);
   std::swap(threshold_, other->threshold_);
   std::swap(armor_size_, other->armor_size_);
   std::swap(enemy_color_, other->enemy_color_);
@@ -3075,63 +2729,15 @@ void ConstraintSetConfig::clear_using_hsv() {
   // @@protoc_insertion_point(field_set:roborts_detection.ConstraintSetConfig.using_hsv)
 }
 
-// required bool using_svm = 4;
-bool ConstraintSetConfig::has_using_svm() const {
+// required .roborts_detection.Threshold threshold = 4;
+bool ConstraintSetConfig::has_threshold() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
-void ConstraintSetConfig::set_has_using_svm() {
+void ConstraintSetConfig::set_has_threshold() {
   _has_bits_[0] |= 0x00000008u;
 }
-void ConstraintSetConfig::clear_has_using_svm() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-void ConstraintSetConfig::clear_using_svm() {
-  using_svm_ = false;
-  clear_has_using_svm();
-}
- bool ConstraintSetConfig::using_svm() const {
-  // @@protoc_insertion_point(field_get:roborts_detection.ConstraintSetConfig.using_svm)
-  return using_svm_;
-}
- void ConstraintSetConfig::set_using_svm(bool value) {
-  set_has_using_svm();
-  using_svm_ = value;
-  // @@protoc_insertion_point(field_set:roborts_detection.ConstraintSetConfig.using_svm)
-}
-
-// required bool create_dataset = 5;
-bool ConstraintSetConfig::has_create_dataset() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-void ConstraintSetConfig::set_has_create_dataset() {
-  _has_bits_[0] |= 0x00000010u;
-}
-void ConstraintSetConfig::clear_has_create_dataset() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-void ConstraintSetConfig::clear_create_dataset() {
-  create_dataset_ = false;
-  clear_has_create_dataset();
-}
- bool ConstraintSetConfig::create_dataset() const {
-  // @@protoc_insertion_point(field_get:roborts_detection.ConstraintSetConfig.create_dataset)
-  return create_dataset_;
-}
- void ConstraintSetConfig::set_create_dataset(bool value) {
-  set_has_create_dataset();
-  create_dataset_ = value;
-  // @@protoc_insertion_point(field_set:roborts_detection.ConstraintSetConfig.create_dataset)
-}
-
-// required .roborts_detection.Threshold threshold = 6;
-bool ConstraintSetConfig::has_threshold() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-void ConstraintSetConfig::set_has_threshold() {
-  _has_bits_[0] |= 0x00000020u;
-}
 void ConstraintSetConfig::clear_has_threshold() {
-  _has_bits_[0] &= ~0x00000020u;
+  _has_bits_[0] &= ~0x00000008u;
 }
 void ConstraintSetConfig::clear_threshold() {
   if (threshold_ != NULL) threshold_->::roborts_detection::Threshold::Clear();
@@ -3167,15 +2773,15 @@ void ConstraintSetConfig::set_allocated_threshold(::roborts_detection::Threshold
   // @@protoc_insertion_point(field_set_allocated:roborts_detection.ConstraintSetConfig.threshold)
 }
 
-// required .roborts_detection.ArmorSize armor_size = 7;
+// required .roborts_detection.ArmorSize armor_size = 5;
 bool ConstraintSetConfig::has_armor_size() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 void ConstraintSetConfig::set_has_armor_size() {
-  _has_bits_[0] |= 0x00000040u;
+  _has_bits_[0] |= 0x00000010u;
 }
 void ConstraintSetConfig::clear_has_armor_size() {
-  _has_bits_[0] &= ~0x00000040u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 void ConstraintSetConfig::clear_armor_size() {
   if (armor_size_ != NULL) armor_size_->::roborts_detection::ArmorSize::Clear();
@@ -3211,15 +2817,15 @@ void ConstraintSetConfig::set_allocated_armor_size(::roborts_detection::ArmorSiz
   // @@protoc_insertion_point(field_set_allocated:roborts_detection.ConstraintSetConfig.armor_size)
 }
 
-// required .roborts_detection.EnemyColor enemy_color = 8;
+// required .roborts_detection.EnemyColor enemy_color = 6;
 bool ConstraintSetConfig::has_enemy_color() const {
-  return (_has_bits_[0] & 0x00000080u) != 0;
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
 void ConstraintSetConfig::set_has_enemy_color() {
-  _has_bits_[0] |= 0x00000080u;
+  _has_bits_[0] |= 0x00000020u;
 }
 void ConstraintSetConfig::clear_has_enemy_color() {
-  _has_bits_[0] &= ~0x00000080u;
+  _has_bits_[0] &= ~0x00000020u;
 }
 void ConstraintSetConfig::clear_enemy_color() {
   enemy_color_ = 0;
@@ -3236,15 +2842,15 @@ void ConstraintSetConfig::clear_enemy_color() {
   // @@protoc_insertion_point(field_set:roborts_detection.ConstraintSetConfig.enemy_color)
 }
 
-// required .roborts_detection.SignalRecognization signal_recognization = 9;
+// required .roborts_detection.SignalRecognization signal_recognization = 7;
 bool ConstraintSetConfig::has_signal_recognization() const {
-  return (_has_bits_[0] & 0x00000100u) != 0;
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
 void ConstraintSetConfig::set_has_signal_recognization() {
-  _has_bits_[0] |= 0x00000100u;
+  _has_bits_[0] |= 0x00000040u;
 }
 void ConstraintSetConfig::clear_has_signal_recognization() {
-  _has_bits_[0] &= ~0x00000100u;
+  _has_bits_[0] &= ~0x00000040u;
 }
 void ConstraintSetConfig::clear_signal_recognization() {
   if (signal_recognization_ != NULL) signal_recognization_->::roborts_detection::SignalRecognization::Clear();

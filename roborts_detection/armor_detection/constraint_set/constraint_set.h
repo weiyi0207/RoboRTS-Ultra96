@@ -31,8 +31,6 @@
 
 #include "../armor_detection_base.h"
 
-#include "svm_predictor/svm_predictor.h"
-
 #include "proto/constraint_set.pb.h"
 #include "constraint_set.h"
 namespace roborts_detection {
@@ -220,8 +218,6 @@ class ConstraintSet : public ArmorDetectionBase {
   // Parameters come form .prototxt file
   bool enable_debug_;
   bool using_hsv_;
-  bool using_svm_;
-  bool create_dataset_;
   unsigned int enemy_color_;
 
   //! Use for debug
@@ -236,16 +232,12 @@ class ConstraintSet : public ArmorDetectionBase {
   //! Filter lights
   std::vector<LightInfo> lights_info_;
   float light_max_aspect_ratio_;
-  float light_min_aspect_ratio_;
-  float light_max_area_;
   float light_min_area_;
   float light_max_angle_;
-  float light_max_area_diff_;
   float light_max_angle_diff_;
 
   //! Filter armor
   float armor_max_angle_;
-  float armor_max_area_;
   float armor_min_area_;
   float armor_max_aspect_ratio_;
   float armor_max_pixel_val_;
@@ -257,9 +249,6 @@ class ConstraintSet : public ArmorDetectionBase {
   float red_thread_;
 
   bool thread_running_;
-
-  //svm
-  SVMPredictor svm_predictor_;
 
   //ros
   ros::NodeHandle nh;

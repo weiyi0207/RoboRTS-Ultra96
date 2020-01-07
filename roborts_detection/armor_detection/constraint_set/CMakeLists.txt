@@ -1,7 +1,5 @@
 project(constraint_set)
 
-add_subdirectory(svm_predictor)
-
 file(GLOB ProtoFiles "${CMAKE_CURRENT_SOURCE_DIR}/proto/*.proto")
 rrts_protobuf_generate_cpp(${CMAKE_CURRENT_SOURCE_DIR}/proto
   ConstraintSetProtoSrc
@@ -18,12 +16,9 @@ add_library(constraint_set
 
 add_library(detection::constraint_set ALIAS constraint_set)
 
-
-TARGET_LINK_LIBRARIES(${PROJECT_NAME}  ${CMAKE_CURRENT_SOURCE_DIR}/libXF_Accel.so)
 target_link_libraries(${PROJECT_NAME}
   PUBLIC
   detection::tool
-  detection::svm_predictor
   ${catkin_LIBRARIES}
   ${OpenCV_LIBRARIES}
   )

@@ -7,6 +7,7 @@ set(COMPILE_PROTO 0)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
+  rospy
   tf
   actionlib
   cv_bridge
@@ -27,4 +28,5 @@ include_directories(${EIGEN3_INCLUDE_DIR} util)
 
 add_subdirectory(util)
 add_subdirectory(armor_detection)
+add_subdirectory(yolo_FPGA)
 #add_subdirectory(color_detection)

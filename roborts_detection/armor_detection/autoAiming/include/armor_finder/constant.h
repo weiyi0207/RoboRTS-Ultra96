@@ -1,0 +1,15 @@
+//
+// Created by zhikun on 19-1-15.
+//
+
+#ifndef SJTU_RM2019_WINTER_VERSION_CONSTANT_H
+#define SJTU_RM2019_WINTER_VERSION_CONSTANT_H
+
+const int ENEMY_BLUE = 123;
+const int ENEMY_RED = 456;
+
+const int SRC_WIDTH = 640;
+const int SRC_HEIGHT = 480;
+
+
+#endif //SJTU_RM2019_WINTER_VERSION_CONSTANT_H

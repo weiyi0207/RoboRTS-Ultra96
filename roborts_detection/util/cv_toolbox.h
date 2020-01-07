@@ -119,7 +119,6 @@ class CVToolbox {
       camera_info_ = *camera_info_msg;
       capture_begin_ = std::chrono::high_resolution_clock::now();
       get_img_info_ = true;
-      ROS_WARN("entering cvtoolbox-->ImageCallback");
     } else {
       capture_time_ = std::chrono::duration<double, std::ratio<1, 1000000>>(std::chrono::high_resolution_clock::now() - capture_begin_).count();
       capture_begin_ = std::chrono::high_resolution_clock::now();

@@ -1,6 +1,6 @@
 name: "constraint_set"
 selected_algorithm: "constraint_set"
-undetected_armor_delay: 10
+undetected_armor_delay: 20
 camera_name: "back_camera"
 camera_gimbal_transform {
     offset_x :0
