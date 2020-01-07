@@ -86,9 +86,9 @@ Below is the directory structure of the ROS workspace.
     │   │   └── yolov3
     │   ├── yolo_detect.h
     │   └── yolo_messenger.h
-    ├── libdpssd.so
-    ├── libdpyolov3.so
-    ├── libglog.so
+    ├── libdpssd.so                         // DPU dependency, needs to be installed in /usr/lib/
+    ├── libdpyolov3.so                      // DPU dependency, needs to be installed in /usr/lib/
+    ├── libglog.so                          // DPU dependency, needs to be installed in /usr/lib/
     └── src
         ├── yolo_detect.cpp                // DPU yolo detection software code 
         └── yolo_messenger.cpp             // ROS node to subscribe or publish messages from or to other nodes
