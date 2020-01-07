@@ -29,7 +29,7 @@ For more information about RoboMaster AI Robot platform and RoboRTS framework, p
 
 For more information about using RoboRTS framework on Xilinx Zynq UltraScale+ ™ MPSoC platform, please refer to [Ultra96 for RoboMaster User Guide](https://weiyi0207.gitbook.io/ultra96-for-robomaster-user-guide/)
 
-For getting the built system image of Ultra96 for RoboMaster, please refer to [RM-Ultra96-image](https://github.com/weiyi0207/RM-Ultra96-image/blob/master/README.md) 
+For getting the built system image of Ultra96 for RoboMaster, please refer to [RM-Ultra96-image](https://github.com/weiyi0207/RM-Ultra96-image/tree/RM_DPU) 
 
 ## Competition
 
